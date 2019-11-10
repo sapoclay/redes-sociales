@@ -13,3 +13,5 @@ Aquí va todo el meollo. Este archivo debe guardarse dentro en una carpeta dentr
 include_once('inc/social.php');
 
 El archivo da la posibilidad de que se muestren los botones en la parte superior (línea 31) o en la parte inferior (línea 32).
+
+Para que se vean los iconos de las redes sociales en los botones, es necesario disponer de font-awesome instalado en el theme. El botón de Whatsapp, solo se va a mostrar en dispositivos móviles.
