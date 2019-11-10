@@ -1,5 +1,5 @@
 # redes-sociales
-El código para poder compartir desde Wordpress en redes sociales sin necesidad de pluging 
+El código para poder compartir desde Wordpress en redes sociales sin necesidad de plugins
 
 ## Archivo style.css
 En este archivo se pueden encontrar algunas líneas CSS para que los botones se vean más chulos.
