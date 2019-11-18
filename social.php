@@ -2,8 +2,11 @@
 
 function dc_social_sharing_buttons($content) 
 {
-	if( is_single() )
-	{	
+	if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) { 
+		return $content;
+	}else{
+	       if( is_single() )
+		{	
 		$plantilla		='
 		 <a class="dc-link dc-twitter" href="{twitter}" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>'.
 		'<a class="dc-link dc-facebook" href="{facebook}" target="_blank"><i class="fa fa-facebook"></i> Facebook </a>'.
@@ -24,7 +27,7 @@ function dc_social_sharing_buttons($content)
 		$ar_reemplazar 	= array($twitterURL,$facebookURL,$linkedInURL,$whatsappURL);
 
 		$cad	.= '<div class="dc-social"><hr/>';
-		$cad	.= '<p id="titulo-dc-social">Si te gustó, comparte el artículo:</p>';
+		$cad	.= '<p> <span id="titulo-dc-social">Si te gustó, comparte el artículo:</span</p>';
 		$cad	.=  str_replace($ar_buscar, $ar_reemplazar, $plantilla);
 		$cad	.= '</div>';
 
@@ -32,10 +35,11 @@ function dc_social_sharing_buttons($content)
 		$content .= $cad; //botones inferiores
 
 		return $content;
-	}
-	else
-	{
+		}
+		else
+		{
 		return $content;
+		}
 	}
 };
 
